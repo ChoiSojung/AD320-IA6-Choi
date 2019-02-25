@@ -1,6 +1,6 @@
 var fs = require ('fs');
-var arg1 = process.argv[2];
-var arg2 = process.argv[3];
+
+
 
 function filterDir(x, y, callback){
     fs.readdir(x, function myFunction (err, list){
@@ -21,5 +21,5 @@ function logF(x){
     console.log(x);
 }
 
-filterDir(arg1, arg2, logF);
+filterDir(process.argv[2], process.argv[3], logF);
 
